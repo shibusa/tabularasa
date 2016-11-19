@@ -1,0 +1,25 @@
+<div ng-controller="loginController">
+  <div ng-controller="qaController">
+    <h1>Hello, {{currentuser.name}}.</h1>
+    <button ng-click="logout()">Log Out</button>
+    <br>
+    <a href="#/new_question">Add a Question</a>
+    <br>
+    <input type="text" placeholder="Search question" ng-model="filter_name">
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>Answers</th>
+        <th>ActionAction</th>
+      </tr>
+      <tr ng-repeat="qs in allqs | filter:filter_name">
+        <td>{{qs.question}}</td>
+        <td>{{qs.answers.length}}</td>
+        <td>
+          <a href="#/question/{{qs._id}}">Show</a>
+          <a href="#/new_answer/{{qs._id}}">Answer</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

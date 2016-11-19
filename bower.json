@@ -1,0 +1,23 @@
+{
+  "name": "login_reg",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Shirfeng Chang <shirfeng.chang@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-messages": "^1.5.8",
+    "angular-cookies": "^1.5.8"
+  }
+}

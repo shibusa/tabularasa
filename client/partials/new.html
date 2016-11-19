@@ -1,0 +1,19 @@
+<div ng-controller="loginController">
+  <div ng-controller="qaController">
+    <button ng-click="home()">Home</button>
+    <button ng-click="logout()">Log Out</button>
+    <h1>New Question</h1>
+    <form name="question" ng-submit="newquestion()">
+      Question: <textarea ng-model="newq.question" name="question" ng-minlength="10" required></textarea>
+      <div ng-messages="question.question.$error">
+        <h2 ng-message="required">Required field.</h2>
+        <h2 ng-message="minlength">Entry too short.</h2>
+      </div>
+      <br>
+      Description (Optional): <textarea ng-model="newq.description"></textarea>
+      <br>
+      <button ng-click="home()">Cancel</button>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>

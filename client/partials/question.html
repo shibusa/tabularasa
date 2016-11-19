@@ -1,0 +1,14 @@
+<div ng-controller="loginController">
+  <div ng-controller="qaController">
+    <button ng-click="home()">Home</button> |  <a href="#/new_answer/{{oneq._id}}">Answer this Question</a>
+    <button ng-click="logout()">Log Out</button>
+    <h1>{{oneq.question}}</h1>
+    <h2>{{oneq.description}}</h2>
+    <div ng-repeat="ans in oneq.answers | orderBy: '-likes' ">
+      <p>{{ans._user.name}}: </p>
+      <p>{{ans.answer}}</p>
+      <p>{{ans.description}}</p>
+      <p>{{ans.likes}} Likes<button ng-click="like(ans._id)">Like</button></p>
+    </div>
+  </div>
+</div>

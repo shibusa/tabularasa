@@ -1,0 +1,10 @@
+<div ng-controller="loginController">
+  <h1>Login and Register</h1>
+  <form name="login" ng-submit="logreg()">
+    <p>Name: <input type="text" ng-model="new.name" name="name" required></p>
+    <div ng-messages="login.name.$error">
+      <h2 ng-message="required">Required field.</h2>
+    </div>
+    <input type="submit" value="Login/Register">
+  </form>
+</div>

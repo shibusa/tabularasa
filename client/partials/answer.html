@@ -1,0 +1,20 @@
+<div ng-controller="loginController">
+  <div ng-controller="qaController">
+    <button ng-click="home()">Home</button> | <a href="#/question/{{oneq._id}}">Go Back to Answers for this Question</a>
+    <button ng-click="logout()">Log Out</button>
+    <h1>{{oneq.question}}</h1>
+    <h2>{{oneq.description}}</h2>
+    <form name="answer" ng-submit="newanswer()">
+      Your Answers: <textarea ng-model="newa.answer" name="answer" ng-minlength="5" required></textarea>
+      <div ng-messages="answer.answer.$error">
+        <h2 ng-message="required">Required field.</h2>
+        <h2 ng-message="minlength">Entry too short.</h2>
+      </div>
+      <br>
+      Supporting Details (Optional): <textarea ng-model="newa.description"></textarea>
+      <br>
+      <button ng-click="home()">Cancel</button>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
